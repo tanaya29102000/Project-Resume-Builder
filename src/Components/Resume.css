@@ -1,0 +1,99 @@
+/* Resume.css */
+
+/* Container for the entire resume page */
+.resume-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Content section with heading and list */
+  .resume-content {
+    max-width: 50%;
+  }
+  
+  .resume-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resume-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .resume-content li {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+    padding-left: 1.5em;
+    position: relative;
+  }
+  
+  /* Custom bullet points with icons */
+  .resume-content li::before {
+    content: '✔'; /* Checkmark bullet */
+    color: #4caf50;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 3px;
+  }
+  
+  /* Image container styles */
+  .resume-image-container {
+    text-align: center;
+  }
+  
+  .resume-image {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  /* Button styling */
+  .resume-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .resume-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .resume-button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .resume-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .resume-content {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .resume-image {
+      width: 80%;
+    }
+  }
+  

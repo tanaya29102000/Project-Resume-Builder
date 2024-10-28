@@ -13,13 +13,13 @@ const Header = () => {
     <header className="header">
       <nav className="navbar">
         <div className="nav-left">
-          <Link to="/">
+          {/* <Link to="/">
             <img
               src="logo1.png.webp"
               alt="Joblytic Logo"
               className="logo-image"
             />
-          </Link>
+          </Link> */}
         </div>
         <div className="nav-links">
           <div className="nav-item">
