@@ -1,0 +1,160 @@
+/* Home.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Change this to your preferred font */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color:white; /* Light gray background for the header */
+}
+
+h1, p {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: orange; /* Set the button background color to orange */
+    border: none; /* Remove default border */
+    color: white; /* Set text color to white for contrast */
+    border-radius: 5px; /* Optional: rounded corners for the button */
+}
+
+.features-section {
+    display: flex; /* Use flexbox to arrange the cards in a row */
+    justify-content: space-around; /* Space them out evenly */
+    margin: 20px; /* Add some margin around the section */
+}
+
+.feature-card {
+    background-color: white; /* White background for each card */
+    border: 1px solid #ccc; /* Optional: add a light border */
+    border-radius: 8px; /* Optional: rounded corners */
+    padding: 20px; /* Add some padding inside the card */
+    width: 30%; /* Set width for each card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for depth */
+    margin: 10px; /* Add margin to create space between cards */
+}
+
+.feature-card h2 {
+    font-size: 1.5em; /* Adjust font size for headings */
+    display: flex; /* Ensure images and text align properly */
+    align-items: center; /* Center align items vertically */
+}
+
+.feature-card img {
+    width: 50px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between image and text */
+}
+
+
+.large-image {
+    width: 100%; /* Set the width to 100% of the container */
+    max-width: 800px; /* Set a maximum width to prevent it from getting too large */
+    height: auto; /* Maintain the aspect ratio of the image */
+    margin: 20px auto; /* Center the image and add margin */
+    display: block; /* Make the image a block element */
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for depth */
+}
+
+.zety-info {
+    padding: 20px;
+    background-color: #f9f9f9; /* Adjust background color as needed */
+  }
+  
+  .zety-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .statistics {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into the next line */
+    justify-content: space-between; /* Distributes space evenly */
+    margin: 20px 0; /* Margin around statistics section */
+  }
+  
+  .statistic {
+    flex: 0 0 calc(33.33% - 20px); /* Three items in a row with space between */
+    box-sizing: border-box; /* Ensures padding/margin is included in width */
+    padding: 10px;
+    text-align: center; /* Center-aligns the text */
+    background: #fff; /* White background for each statistic */
+    border: 1px solid #ddd; /* Light border for better visibility */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between rows */
+  }
+  
+  .statistic h3 {
+    font-size: 24px; /* Adjust font size as needed */
+    margin: 0;
+  }
+  
+  .statistic p {
+    margin: 5px 0 0;
+    color: #666; /* Grey color for description */
+  }
+  
+  .services {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space between cards */
+    margin: 20px 0; /* Margin above and below the section */
+  }
+  
+  .service-card {
+    flex: 0 0 calc(30% - 10px); /* Each card takes up 30% of the row minus margin */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    padding: 15px; /* Padding inside cards */
+    background: #fff; /* White background for cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between rows */
+    text-align: center; /* Center text */
+    font-size: 14px; /* Font size */
+  }
+  
+  .service-card h4 {
+    font-size: 16px; /* Heading size */
+    margin-bottom: 10px; /* Space below the heading */
+  }
+  
+  .service-card p {
+    font-size: 14px; /* Paragraph size */
+  }
+  .services {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space between cards */
+    margin: 20px 0; /* Margin above and below the section */
+  }
+  
+  .service-card {
+    flex: 0 0 calc(30% - 10px); /* Each card takes up 30% of the row minus margin */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    padding: 15px; /* Padding inside cards */
+    background: #fff; /* White background for cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between rows */
+    text-align: center; /* Center text */
+    font-size: 14px; /* Font size */
+  }
+  
+  .service-card h4 {
+    font-size: 16px; /* Heading size */
+    margin-bottom: 10px; /* Space below the heading */
+  }
+  
+  .service-card p {
+    font-size: 14px; /* Paragraph size */
+  }
+  

@@ -1,0 +1,174 @@
+/* Header styles */
+.header {
+    background-color: #fff;
+    padding: 10px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Navbar container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Logo styling */
+  .logo-image {
+    width: 120px;  /* Adjust width to control logo size */
+    height: auto;
+    object-fit: contain; /* Ensures logo scales properly */
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  /* Logo hover effect */
+  .logo-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  /* Navigation links container */
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Styling for general nav links */
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for links */
+  .nav-link:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Dropdown icon styling */
+  .dropdown-icon {
+    font-size: 12px;
+    color: #333;
+    margin-left: -8px;
+  }
+  
+  /* Styling for Account button with blue background */
+  .account-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: blue;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+  }
+  
+  /* Hover effect for Account button */
+  .account-button:hover {
+    background-color: darkblue;
+    transform: scale(1.05);
+  }
+  /* Tools card dropdown styling */
+.tools-card {
+    position: absolute;
+    top: 60px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 20px;
+    z-index: 100;
+    right: 15px; /* Adjust alignment to the right side */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual tool item styling */
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Tool item images */
+.tool-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    padding: 5px;
+}
+
+/* Styling for tool item text */
+.tool-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-item strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.tool-item p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Horizontal line between tool items */
+.tools-card hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 10px 0;
+}
+
+/* Close card when clicking outside (optional interaction) */
+.tools-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Dropdown icon alignment */
+.nav-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-item .dropdown-icon {
+    margin-left: 5px;
+    transition: transform 0.2s;
+}
+
+/* Rotate dropdown icon when open */
+.nav-item.open .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Card visibility transition */
+.tools-card {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Show tools card */
+.nav-item:hover .tools-card,
+.nav-item.open .tools-card {
+    opacity: 1;
+    transform: translateY(0);
+}
