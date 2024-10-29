@@ -4,6 +4,7 @@ import "./Header.css";
 
 const Header = () => {
   const [showToolsCard, setShowToolsCard] = useState(false);
+const [showResume,setShowResume] = useState(false);
 
   const toggleToolsCard = () => {
     setShowToolsCard((prevState) => !prevState);
