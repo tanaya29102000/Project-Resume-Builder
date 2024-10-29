@@ -1,10 +1,43 @@
-import React from "react";
+import React, {useState} from "react";
+import { useEffect } from "react";
 import "./Home.css"; // Import the corresponding CSS file
 
 const Home = () => {
   const handleResume = () => {
     alert("Resume Builder Clicked!"); // For example purposes, show an alert
   };
+
+  const hrDetails = [
+    {
+      img: "images.jpg",
+      info: "Build professional resumes with Zety to stand out in the job market.",
+    },
+    {
+      img: "images (1).jpg",
+      info: "Zety’s resume templates are recommended by top HR experts.",
+    },
+    {
+      img: "images.jpg",
+      info: "Zety provides personalized career advice to boost your opportunities.",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-swap every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % hrDetails.length);
+    }, 3000);
+
+    // Cleanup interval on unmount
+    return () => clearInterval(interval);
+  }, [hrDetails.length]);
+
+  const handleDotClick = (index) => {
+    setCurrentIndex(index);
+  };
+
 
   return (
     <div>
@@ -163,6 +196,40 @@ const Home = () => {
             professional job application in minutes.
           </p>
         </div>
+      </section>
+      <section>
+      <div className="cart-container">
+      <h2 className="cart-title">HR Professionals Recommend Zety</h2>
+
+      <div className="hr-images-section">
+        <div className="hr-image">
+          <img
+            src={hrDetails[currentIndex].img}
+            alt={`HR Recommendation ${currentIndex + 1}`}
+          />
+          <p className="image-info">{hrDetails[currentIndex].info}</p>
+        </div>
+      </div>
+
+      {/* Navigation Dots */}
+      <div className="dots-container">
+        {hrDetails.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentIndex ? "active" : ""}`}
+            onClick={() => handleDotClick(index)}
+          ></span>
+        ))}
+      </div>
+
+      <p className="zety-info">
+        Industry experts recommend Zety as a proven way to boost your career. 
+        Zety’s user-friendly builder provides optimized templates that 
+        improve your chances of passing ATS filters, ensuring that your resume 
+        gets in front of recruiters. From AI-generated bullet points to customizable 
+        sections, Zety makes resume creation simple and effective.
+      </p>
+    </div>
       </section>
     </div>
   );
