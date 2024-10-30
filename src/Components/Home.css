@@ -23,7 +23,7 @@ button {
     background-color: orange; /* Set the button background color to orange */
     border: none; /* Remove default border */
     color: white; /* Set text color to white for contrast */
-    border-radius: 5px; /* Optional: rounded corners for the button */
+    border-radius: 19px; /* Optional: rounded corners for the button */
 }
 
 .features-section {
@@ -277,7 +277,7 @@ button {
   flex: 1;
   max-width: 300px;
   border: 1px solid #0073e6;
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 20px;
   text-align: center;
   background-color: #f0f8ff;

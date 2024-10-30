@@ -1,0 +1,136 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .zety-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 40px;
+  }
+  
+  .statistics, .zety-description {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  .statistics {
+    margin-right: 20px;
+  }
+  
+  .statistic h3 {
+    color: #2a9d8f;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .statistic p {
+    margin: 8px 0 16px;
+    color: #4a4a4a;
+  }
+  
+  /* Zety Description */
+  .zety-description h2 {
+    color: #264653;
+    margin-bottom: 16px;
+  }
+  
+  .zety-description p {
+    margin: 12px 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .zety-description h3 {
+    margin-top: 24px;
+    color: #2a9d8f;
+  }
+  
+  /* Services Section Styling */
+/* General Styling */
+.services {
+  padding: 40px 20px;
+}
+
+.services h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Service Card Layout */
+.service-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.title {
+  margin-left: 80px;
+  font-size: 25px; /* Correct font size */
+  font-weight: 800; /* Adjust weight (max is typically 900) */
+  text-align: center; /* Use this for centering text */
+}
+
+/* Image on the left */
+.service-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+/* Text information on the right */
+.service-info {
+  flex: 1;
+}
+
+.service-info h4 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #2a9d8f;
+}
+
+.service-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Hover effect */
+.service-card:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-card img {
+    margin: 0 0 15px;
+  }
+}
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .zety-layout {
+      flex-direction: column;
+    }
+  }
+  
