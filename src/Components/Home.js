@@ -4,12 +4,15 @@ import "./Home.css"; // Import the corresponding CSS file
 import ResumeFile from "./ResumeFile";
 import FAQ from "./FAQ";
 import ZetyFile from "./ZetyFile";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-  const handleResume = () => {
-    alert("Resume Builder Clicked!"); // For example purposes, show an alert
-  };
 
+  const navigate = useNavigate();
+
+  const handleResume = () => {
+    navigate('/create-resume');
+  };
   const hrDetails = [
     {
       img: "images.jpg",

@@ -1,0 +1,78 @@
+/* Createresume.css */
+
+.resume-builder-containerr {
+    display: flex;
+    justify-content: space-between; /* Distribute space between text and image */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: white; /* Set background color to white */
+    border-radius: 8px; /* Optional: Add rounded corners to the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+  }
+  
+  .resume-text {
+    flex: 1; /* Allow the text section to take available space */
+    margin-right: 20px; /* Add margin to separate text from the image */
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* Adjust the size as needed */
+    font-weight: bold; /* Make the heading bold */
+    margin-bottom: 10px; /* Add space below the heading */
+  }
+  
+  p {
+    font-size: 1.2rem; /* Adjust the size as needed */
+    line-height: 1.5; /* Improve line spacing for readability */
+  }
+  
+  .resume-image-container {
+    flex: 1; /* Allow the image section to take available space */
+    text-align: center; /* Center align the image */
+  }
+  
+  .resume-image {
+    width: 100%; /* Make the image responsive to the container */
+    max-width: 600px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  /* Createresume.css */
+
+/* ...existing styles... */
+
+.final-section {
+    text-align: center; /* Center align the text */
+    padding: 40px 20px; /* Add padding for spacing */
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px; /* Margin around the section */
+  }
+  
+  .final-section h2 {
+    font-size: 2rem; /* Size for the heading */
+    font-weight: bold; /* Bold font */
+    margin-bottom: 10px; /* Space below the heading */
+  }
+  
+  .final-section p {
+    font-size: 1.2rem; /* Font size for the paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
+  }
+  
+  .final-button {
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 1rem; /* Font size for button */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .final-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  

@@ -50,6 +50,7 @@ import OtpVerification from "./Components/OtpVerification";
 import ResumeFile from "./Components/ResumeFile";
 import FAQ from "./Components/FAQ";
 import ZetyFile from "./Components/ZetyFile";
+import Createresume from "./Components/Createresume";
 
 function App() {
   const location = useLocation(); // Get the current route path
@@ -72,6 +73,7 @@ function App() {
         <Route path="/resumefile" element={<ResumeFile />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/zety" element={<ZetyFile />} />
+        <Route path="/create-resume" element={<Createresume/>}/>
       </Routes>
     </>
   );
