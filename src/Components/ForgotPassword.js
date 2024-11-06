@@ -1,35 +1,4 @@
-// // ForgotPassword.js
-// import React, { useState } from 'react';
 
-// const ForgotPassword = () => {
-//   const [email, setEmail] = useState('');
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     console.log('Reset password for:', email);
-//     // Add logic to handle password reset email sending here
-//   };
-
-//   return (
-//     <div className="auth-container">
-//       <form onSubmit={handleSubmit} className="auth-form">
-//         <h2>Reset Your Password</h2>
-//         <label>Email Address</label>
-//         <input
-//           type="email"
-//           placeholder="Enter your registered email"
-//           value={email}
-//           onChange={(e) => setEmail(e.target.value)}
-//           required
-//         />
-//         <button type="submit" className="auth-button">Send Reset Link</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default ForgotPassword;
-// ForgotPassword.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import axios from 'axios'; // For making HTTP requests

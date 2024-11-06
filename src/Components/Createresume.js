@@ -84,15 +84,6 @@ const ResumeBuilder = () => {
           <button type="button">Create Your Resume Now</button>
         </div>
       </section>
-
-      {/* Last Section */}
-      {/* <div className="final-section">
-        <h2>Ready to Get Started?</h2>
-        <p>
-          Join thousands of satisfied users who have successfully crafted their resumes and landed their dream jobs!
-        </p>
-        <button type="button" className="final-button">Start Building Your Resume Today</button>
-      </div> */}
     </>
   );
 };
