@@ -1,5 +1,7 @@
+
 // import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+// import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
+// import Swal from "sweetalert2"; // Import SweetAlert2
 // import "./auth.css";
 
 // const Signup = () => {
@@ -9,14 +11,40 @@
 //     confirmPassword: "",
 //   });
 
+//   const navigate = useNavigate(); // Initialize useNavigate
+
 //   const handleChange = (e) => {
 //     setFormData({ ...formData, [e.target.name]: e.target.value });
 //   };
 
 //   const handleSubmit = (e) => {
 //     e.preventDefault();
-//     // Add signup logic
-//     console.log("Signup with", formData);
+
+//     const { email, password, confirmPassword } = formData;
+
+//     // Validate if passwords match
+//     if (password !== confirmPassword) {
+//       // SweetAlert for password mismatch
+//       Swal.fire({
+//         icon: "error",
+//         title: "Passwords do not match",
+//         text: "Please ensure both passwords are the same.",
+//       });
+//       return;
+//     }
+
+//     // Simulate successful signup
+//     Swal.fire({
+//       icon: "success",
+//       title: "Account Created!",
+//       text: "Your account has been created successfully.",
+//       confirmButtonText: "Proceed to Login",
+//     }).then(() => {
+//       // Redirect to login page after confirmation
+//       navigate("/login");
+//     });
+
+//     console.log("Signup with", formData); // Log form data
 //   };
 
 //   return (
@@ -86,7 +114,7 @@ const Signup = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { email, password, confirmPassword } = formData;
@@ -102,18 +130,46 @@ const Signup = () => {
       return;
     }
 
-    // Simulate successful signup
-    Swal.fire({
-      icon: "success",
-      title: "Account Created!",
-      text: "Your account has been created successfully.",
-      confirmButtonText: "Proceed to Login",
-    }).then(() => {
-      // Redirect to login page after confirmation
-      navigate("/login");
-    });
+    try {
+      const response = await fetch("http://localhost:5000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password,
+        }),
+      });
 
-    console.log("Signup with", formData); // Log form data
+      if (response.ok) {
+        // Simulate successful signup
+        Swal.fire({
+          icon: "success",
+          title: "Account Created!",
+          text: "Your account has been created successfully.",
+          confirmButtonText: "Proceed to Login",
+        }).then(() => {
+          // Redirect to login page after confirmation
+          navigate("/login");
+        });
+      } else {
+        // Handle unsuccessful registration
+        const errorData = await response.json();
+        Swal.fire({
+          icon: "error",
+          title: "Registration Failed",
+          text: errorData.message || "An error occurred during registration.",
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Network Error",
+        text: "Unable to connect to the server. Please try again later.",
+      });
+      console.error("Error:", error);
+    }
   };
 
   return (
